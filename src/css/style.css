@@ -1,0 +1,398 @@
+
+
+body {
+    font-family: Montserrat;
+    text-decoration: none;
+    width: 90%;
+    margin: auto;
+    
+}
+
+.banner {
+    background-color:indianred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1240px;
+    height: 223px; /* ajustez la hauteur en fonction de vos besoins */
+    margin: auto;
+    border-radius: 25px;
+    background-image:url('/public/img/banner_home.png');
+    background-size: cover; /* ajustez le mode de remplissage en fonction de vos besoins */
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin-top: 75px;
+}
+
+
+
+
+
+.banner img {
+  max-height: 100%;
+  object-fit:cover; /* ajustez le mode de remplissage en fonction de vos besoins */
+}
+
+.banner h1 {
+    font-size: 3rem; /* ajustez la taille du titre en fonction de vos besoins */
+    text-align: center;
+    color: white;
+    z-index: 2; /* assurez-vous que le titre est au-dessus du pseudo-élément */
+  }
+
+
+
+
+.card-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1240px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 340px;
+    height: 340px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FF6060, #8E3A3A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FF6060, #8E3A3A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.card h2 {
+    color:white;
+    text-align: left;
+    font-size: 1.1em;
+    margin-left: 15px;
+    text-decoration: none;
+    margin-right: 15px;
+    
+}
+
+.card img {
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1240px;
+    margin: auto;
+    margin-top: 25px;
+    
+  
+}
+
+nav a {
+    font-size: 1.4em;
+padding-left: 4em;   
+color: #FF6060;
+font-weight: 500;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 209px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+footer img {
+    width: 123px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.menu-propos {
+    padding: 20px;
+}
+
+.menu-propos, title {
+    color: white;
+
+ 
+}
+
+.star-filled {
+    color: #FF6060;
+    font-size: 1.6em;
+    padding: 4px;
+  }
+
+  .star-filled-grey {
+    color: #E3E3E3;
+    font-size: 1.6em;
+    padding: 4px;
+  }
+  
+  .star-empty {
+    color: #E3E3E3;
+    font-size: 1.6em;
+    padding: 4px;
+  }
+
+  .error h1 {
+    color: #FF6060;
+    font-size: 263px;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+  }
+
+  .error, p, a{
+    text-align: center;
+    margin-top: 0;
+
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+ 
+
+  
+  .description1 {
+    width: 1240px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .bloc1{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    color: #FF6060;
+    height: 100%;
+   
+  }
+
+  
+
+  .bloc1 h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .bloc1 p {
+    margin-top: 0;
+  }
+
+  
+  .bloc2 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #FF6060;
+    
+  }
+
+  .bloc2 p {
+    color:#FF6060;
+    width: 50%;
+    text-align: end;
+    padding-right: 15px;
+  }
+
+  .bloc3 {
+    width: 1240px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .hote img {
+    width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  }
+
+  .hote_photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hote {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .location {
+    color:#FF6060;
+    text-align: left;
+    margin-top: 0px;
+  }
+
+
+
+
+
+
+
+  .accordeon h2 {
+    color: white;
+    cursor: pointer;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 20px;
+    
+  }
+  
+  .accordeon h2.open {
+    background-color: #FF6060;
+    
+  }
+  
+  .accordeon h2.closed {
+    background-color: #FF6060;
+  }
+  
+  .accordeon .content {
+    background-color: #F6F6F6;
+    width: 100%;
+    height: auto;
+    margin-top: -30px;
+    border-radius: 0 0 15px 15px;
+
+  }
+
+  .accordeon .content p {
+    padding-top: 15px;
+    color: red;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    
+  }
+  
+  ul.tag-list {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut des listes */
+    margin-bottom: 0;
+  }
+  
+  ul.tag-list li {
+    display: inline-block; /* Affiche les tags en ligne */
+    margin-right: 10px;
+    padding: 5px 10px; /* Ajoute un peu d'espace autour du texte à l'intérieur du tag */
+    background-color: #FF6060; /* Met une couleur de fond au tag */
+    color:white;
+    text-align: center; /* Centre le texte dans le tag */
+    border-radius: 10px;
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .slideshow-button {
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: none;
+    font-size: 5rem;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color:white;
+
+  }
+  
+  .slideshow-button-previous {
+    left: 10px;
+  }
+  
+  .slideshow-button-next {
+    right: 10px;
+  }
+  
+  .slideshow img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+  }
+  
+  .open_collapse{
+    color:#FF6060;
+    padding-top: 5px;
+    padding-bottom: 25px;
+  }
+
+
+.bloc-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: auto;
+
+}
+
+
+
+
+/* Styles spécifiques à la page About */
+.about-page .accordeon {
+    width: 80% ;
+    margin: auto;
+}
+
+/* Styles spécifiques à la page Accommodation */
+.accommodation-page .accordeon {
+    width: 49% ;
+}
+
+.accordeon h2.open, .accordeon h2.closed {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3%;
+    /* autres styles */
+  }
+  
+  
