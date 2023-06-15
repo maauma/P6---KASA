@@ -62,7 +62,7 @@ const AccommodationPage = () => {
 
         <Collapse className="accommodation-accordeon" title={"Equipements"}>
           <div className='open_collapse'>
-            <ul className="list-items" style={{textAlign: 'left'}}>
+            <ul className="list-items">
               {accommodation.equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
               ))}

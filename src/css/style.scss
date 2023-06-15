@@ -14,6 +14,11 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 0 5%;
+  min-height:1000px;
+
+  .main-content {
+  min-height: calc(100% - 50px);
+  }
 
   .menu {
     gap: 5%;
@@ -172,6 +177,12 @@ body {
     align-items: center;
     margin-top: 100px;
 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+
+    
     img {
       width: 123px;
       height: auto;
@@ -364,7 +375,6 @@ body {
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: auto;
       border-radius: 0 0 15px 15px;
       background-color: #F6F6F6;
       margin-top: -17px;
@@ -470,14 +480,21 @@ body {
     list-style: none;
     text-align: left;
     padding: 0;
-    margin-left: -5%;
     margin-top: 25px;
     font-size: 1.1em;
+    margin-left: 3%;
     
   }
 
-  ul.list-items {
-    text-align: left!important;
+  .open_collapse {
+    width: 100%;
+    min-height: 30px;
+  }
+
+  .list-items{
+    width: 100%;
+    padding: auto;
+    text-align: center;
   }
   
   
