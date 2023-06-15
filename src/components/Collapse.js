@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+  const [maxHeight, setMaxHeight] = useState("0px");
+
+  useEffect(() => {
+    if(contentRef.current) {
+      setMaxHeight(`${contentRef.current.scrollHeight}px`);
+    }
+  }, [children]);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -15,7 +24,13 @@ const Collapse = ({ title, children }) => {
         {title}
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
       </h2>
-      {isOpen && <div className='content'>{children}</div>}
+      <div 
+        className={`content ${isOpen ? 'open' : 'closed'}`} 
+        style={{minHeight: isOpen ? maxHeight : "0px"}}
+        ref={contentRef}
+      >
+        {children}
+      </div>
     </div>
   );
 };

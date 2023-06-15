@@ -7,7 +7,7 @@ import AboutPage from './pages/AboutPage';
 import AccommodationPage from './pages/AccommodationPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Footer from './components/Footer';
-import './css/style.css';
+import './css/style.scss';
 
 function App() {
   return (

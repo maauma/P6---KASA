@@ -10,12 +10,15 @@ function Card({ property }) {
       <Link to={`/accommodation/${property.id}`}>
         <div className="card">
           {/* Ajoutez une balise img pour afficher l'image */}
-          <img src={imageUrl} alt={property.title} />
-          <h2 className="card-title">{property.title}</h2>
+          <div className="image-container">
+            <img src={imageUrl} alt={property.title} />
+            <h2 className="card-title">{property.title}</h2>
+          </div>
         </div>
       </Link>
     </div>
   );
 }
+
 
 export default Card;
