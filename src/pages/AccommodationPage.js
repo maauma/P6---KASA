@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../components/Slideshow';
 import data from '../components/data/logements.json';
 import Rating from '../components/Rating';
 import Collapse from '../components/Collapse';
 
+// Crée un composant fonctionnel AccommodationPage
 const AccommodationPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Ajoutez cette ligne
   const [accommodation, setAccommodation] = useState(null);
   const [error, setError] = useState(false);
 
+  // Récupère les informations sur l'hébergement en fonction de l'ID
   useEffect(() => {
     const foundAccommodation = data.find((item) => item.id === id);
     if (foundAccommodation) {
@@ -21,13 +24,15 @@ const AccommodationPage = () => {
   }, [id]);
 
   if (!accommodation && !error) {
-    return <div>Loading...</div>;
+    return <div>Chargement...</div>;
   }
 
   if (error) {
-    return <div>Le bien est introuvable...</div>;
+    navigate('/not-found'); // Utilisez navigate pour rediriger
+    return null;
   }
 
+  // Renvoie le rendu de la page d'hébergement avec les informations et les images
   return (
     <div className='logement accommodation-page'>
       <div className='carrousel'>
@@ -74,4 +79,5 @@ const AccommodationPage = () => {
   );
 };
 
-export default AccommodationPage;
+// Exporte le composant AccommodationPage pour être utilisé dans d'autres parties de l'application
+export default AccommodationPage

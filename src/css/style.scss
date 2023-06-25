@@ -14,7 +14,7 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 0 5%;
-  min-height:1000px;
+  min-height:800px;
 
   .main-content {
   min-height: calc(100% - 50px);
@@ -101,7 +101,7 @@ body {
     height: 340px;
     margin-bottom: 20px;
     border-radius: 10px;
-    overflow: hidden; /* Ajouté pour respecter le border-radius sur l'image et le titre */
+    overflow: hidden; 
 
     &::after {
       content: '';
@@ -126,7 +126,7 @@ body {
         border-radius: 10px 10px 0px 0px;
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Utilisez 'cover' pour éviter de déformer l'image */
+        object-fit: cover; 
         z-index: 0;
       }
   
@@ -268,6 +268,7 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     color: $red;
+   
 
 
     p {
@@ -303,6 +304,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: end;
+
   }
 
   .location {
@@ -313,10 +316,11 @@ body {
 
   .accordion-container {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row; 
+    align-items: stretch; 
     justify-content: space-between;
   }
+  
 
 
   .accordeon {
@@ -469,8 +473,7 @@ body {
   }
     
   .content.open {
-    height: auto;
-    max-height: 800px;  // Adjust this value as needed
+    max-height: 800px;  
     opacity: 1;
     visibility: visible;
   }
@@ -488,7 +491,6 @@ body {
 
   .open_collapse {
     width: 100%;
-    min-height: 30px;
   }
 
   .list-items{
@@ -556,6 +558,8 @@ body {
       flex-direction: row;
       width: 100%;
       margin-top: 15px;
+      justify-content: space-between;
+
     }
 
     .accommodation-page{
@@ -586,10 +590,8 @@ body {
   
     .hote {
       margin-left: 0px;
-     justify-content: flex-start;
-     padding: 0;
-     margin: 0;
      order: 1;
+     justify-content: end;
 
     }
 

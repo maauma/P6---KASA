@@ -2,10 +2,13 @@ import React from 'react';
 import Collapse from '../components/Collapse';
 import Banner from '../components/Banner';
 
+// Crée un composant fonctionnel About
 const About = () => {
   return (
     <>
+      {/* Affiche la bannière de la page "À propos" */}
       <Banner  image="/img/banner-about.webp" />
+      {/* Affiche les sections rétractables avec les informations sur Kasa */}
       <div className='menu-propos about-page'>
         <Collapse className="about-accordeon" title="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>
@@ -24,4 +27,5 @@ const About = () => {
   );
 };
 
+// Exporte le composant About pour être utilisé dans d'autres parties de l'application
 export default About;

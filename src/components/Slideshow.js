@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Crée un composant fonctionnel Slideshow
 const Slideshow = ({ images }) => {
   // Définir l'état pour suivre l'image actuellement affichée
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -18,6 +19,7 @@ const Slideshow = ({ images }) => {
     setCurrentImageIndex(newIndex);
   };
 
+  // Renvoie le rendu du diaporama avec les boutons "précédent" et "suivant" et l'image actuelle
   return (
     <div className="slideshow">
       {images.length > 1 && (
@@ -31,4 +33,5 @@ const Slideshow = ({ images }) => {
   );
 };
 
+// Exporte le composant Slideshow pour être utilisé dans d'autres parties de l'application
 export default Slideshow;
