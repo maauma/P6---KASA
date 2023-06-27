@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 
 
   .main-content, a {
@@ -28,10 +29,11 @@ body {
 main{
   padding: 0 2%;
   margin: auto;
-  min-height: calc(100% - 50px);
   max-width: 1240px;
   flex: 1 0 auto;
   min-height: 80vh;
+  margin-bottom: 0;
+
 }
 
   .menu {
@@ -62,6 +64,8 @@ main{
     background-position: center center;
     position: relative;
     margin-top: 45px;
+    height: 223px;
+    margin-bottom: 15px;
 
     &::before {
       content: "";
@@ -71,8 +75,9 @@ main{
       bottom: 0;
       left: 0;
       background: $black;
-      opacity: 0.3;
+      opacity: 0.1;
       border-radius: 25px;
+      z-index: 1;
     }
 
     img {
@@ -82,33 +87,35 @@ main{
 
     h1 {
       font-size: 3rem;
-      text-align: center;
+      text-align: left;
       color: $white;
       z-index: 2;
+      font-weight: 100;
     }
+
   }
 
   .card-list {
     display: grid;
     width: 100%;
-    margin: auto;
     margin-top: 40px;
     margin-bottom: 50px;
-    background-color: #F6F6F6;
+    background-color: $grey;
     border-radius: 25px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, auto); // Change ici
+    justify-content: center; // Centrer horizontalement les éléments de la grille
+    align-content: center; // Centrer verticalement les éléments de la grille
   }
 
   .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 340px;
-    margin-bottom: 20px;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
+    margin: 5%;
+  
 
     &::after {
       content: '';
@@ -185,8 +192,8 @@ main{
     transform: translate(-50%, -50%);
     color: #fff;
     padding: 5px 10px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     border-radius: 5px;
   }
 
@@ -213,9 +220,14 @@ main{
     }
   }
 
-  .menu-propos {
-    padding: 20px;
-    color: $white;
+ 
+  
+  .menu-propos.about-page {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .star-filled,
@@ -234,34 +246,37 @@ main{
   .error {
     color: #FF6060;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 75vh; /* Prend 100% de la hauteur de la fenêtre de visualisation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h1 {
       color: $red;
-      font-size: 12em;
+      font-size: 15em;
       text-align: center;
-      margin-top: 5%;
       margin-bottom: 12%;
     }
 
     p {
       margin-top: 0;
-      text-align: center;
-      align-items: center;
-      font-size: 2em;
-      margin-bottom: 5%;
+    text-align: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 7%;
     }
 
     a{
-      
       color: #FF6060;
       text-decoration: underline;
+      margin-bottom: 20%;
     }
   }
 
+  
 
 
   .description1 {
@@ -450,7 +465,7 @@ main{
   .slideshow {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 500px!important;
     overflow: hidden;
     border-radius: 25px;
     margin-bottom: 50px;
@@ -458,7 +473,7 @@ main{
 
     img {
       width: 100%;
-      height: 500px;
+      height: 500px!important;
       object-fit: cover;
     }
   }
@@ -564,11 +579,47 @@ main{
 
   @media (max-width: 768px) {
 
+    .accordeon {
+      padding-bottom: 5px;
+      h2 {
+        &.open,
+        &.closed {
+          height: 35px;
+        }
+      }
+    }
+
+  
+
+       
+    .banner {
+      width: 90%;
+      height: 111px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h1{
+        width: 85%;
+        font-size: 2em;
+        text-align: left;
+      }
+  
+    
+    }
+
+    .banner-about {
+      height: 300px;
+      margin-bottom: 0px;
+    }
     
 
+ 
+  
     .accordeon{ &.closed
       {
         background-color: #FF6060!important;
+        
       }}
   
     nav img{
@@ -614,28 +665,28 @@ main{
       margin-top: 15px;
       justify-content: space-between;
       align-items: center;
+      p {
+        color: $red;
+        width: 50%;
+        text-align: end;
+      }
 
-    }
+      img {
+        height: 44px;
+        width: 44px;
+      }
 
-  
-
-    .banner{
-      margin-bottom: 15%;
-    }
-
-    .accommodation-page{
-      display: flex;
-      flex-direction: column;
     }
 
     .bloc3{
       flex-direction: column;
+      justify-content: baseline;
       width: 100%;
     gap:0px;
     }
 
     .bloc-logo{
-      width: 28%;
+      width: 50%;
     }
 
     .menu {
@@ -661,22 +712,24 @@ main{
     }
 
     .banner,
-    .card-list,
-    nav {
-      width: 90%;
+    .card-list {
+      width: 100%;
     }
 
 
 
     nav {
+      width: 100%;
       a {
-        font-size: 1.1em;
+        font-size: 0.9em;
       }
+
 
 
 
       img {
         height: 50px;
+        padding-left: 0;
       }
     }
 
@@ -689,30 +742,21 @@ main{
   
 
 
-    
-    .banner {
-      height: 111px;
-      margin-bottom: 15px;
-  
-      h1 {
-        font-size: 1.5rem;
-        text-align: left;
-        padding-left: 25px;
-      }
-    }
-
-    
+ 
   
   }
 
+
+
+  
+@media (max-width: 768px) {
+
+
   .error {
-    min-height: 585px;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 0;
+    height: 75vh; /* Prend 100% de la hauteur de la fenêtre de visualisation */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
     h1 {
       color: $red;
@@ -723,18 +767,16 @@ main{
 
     p {
       margin-top: 0;
-      text-align: center;
-      align-items: center;
-      font-size: 1.2em;
-      margin-bottom: 5%;
-      width: 75%;
+    text-align: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 25%;
     }
 
     a{
-      
       color: #FF6060;
       text-decoration: underline;
-      margin-bottom: 75px;
+      margin-bottom: 20%;
     }
   }
 
@@ -742,35 +784,28 @@ main{
 
 
   .slideshow {
-    position: relative;
-    width: 100%;
-    height: 255px;
-    overflow: hidden;
-    border-radius: 25px;
-    margin-bottom: 0px;
-    margin-top: 40px;
-
+    height: 300px!important;
+  
     img {
-      width: 100%;
-      height: 255px;
-      object-fit: cover;
+      height: 300px!important;
     }
   }
-
   .slideshow-button {
     font-size: 35px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    z-index: 2;
   }
+
+  
+
+}
+
+
+
+  
+
+  
+
 
 
 
 
 }
-

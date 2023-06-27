@@ -1,7 +1,9 @@
 import React from 'react';
+import '../css/style.scss';
 
 // Crée un composant fonctionnel Banner
 function Banner({ title, image, page }) {
+  
   // Applique le style de la bannière en fonction de l'image passée en paramètre
   const bannerStyle = {
     backgroundImage: `url(${image})`,
@@ -11,15 +13,12 @@ function Banner({ title, image, page }) {
 
   // Détermine la classe de la bannière en fonction de la page où elle se trouve
   let bannerClassName = 'banner';
-  if (page === 'home') {
+  if (page === 'HomePage') {
     // Ajoute la classe spécifique pour la bannière de la page d'accueil
     bannerClassName += ' banner-home';
-  } else if (page === 'about') {
+  } else if (page === 'AboutPage') {
     // Ajoute la classe spécifique pour la bannière de la page "À propos" et la version mobile
     bannerClassName += ' banner-about banner-about-mobile';
-  } else if (page === 'contact') {
-    // Ajoute la classe spécifique pour la bannière de la page "Contact"
-    bannerClassName += ' banner-contact';
   }
 
   // Renvoie le rendu du composant Banner avec le titre et le style appropriés

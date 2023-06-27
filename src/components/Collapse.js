@@ -29,7 +29,7 @@ const Collapse = ({ title, children }) => {
       {/* Affiche le titre et l'icône en fonction de l'état d'ouverture */}
       <h2 className={isOpen ? 'open' : 'closed'} onClick={toggleOpen}>
         {title}
-        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+        <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
       </h2>
       {/* Affiche le contenu en fonction de l'état d'ouverture et ajuste la hauteur */}
       <div 

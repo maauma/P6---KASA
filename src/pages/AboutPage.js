@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       {/* Affiche la bannière de la page "À propos" */}
-      <Banner  image="/img/banner-about.webp" />
+      <Banner  image="/img/banner-about.webp" page="AboutPage" />
       {/* Affiche les sections rétractables avec les informations sur Kasa */}
       <div className='menu-propos about-page'>
         <Collapse className="about-accordeon" title="Fiabilité">
@@ -19,7 +19,7 @@ const About = () => {
         <Collapse className="about-accordeon" title="Service">
           <p>Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.</p>
         </Collapse>
-        <Collapse className="about-accordeon" title="Sécurité">
+        <Collapse className="about-accordeon" title="Sécurité" page="AboutPage">
           <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.</p>
         </Collapse>
       </div>
