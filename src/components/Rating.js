@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/style.css';
 
 // Crée un composant fonctionnel Rating
 const Rating = ({ rating }) => {

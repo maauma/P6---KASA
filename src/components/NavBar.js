@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Crée un composant fonctionnel NavBar
 function NavBar() {
@@ -6,14 +7,16 @@ function NavBar() {
     // Renvoie le rendu de la barre de navigation avec le logo et les liens
     <nav>
       <div className='bloc-logo'>
-        {/* Affiche le logo */}
-        <img src="/logo.png" alt="Logo" />
+        {/* Affiche le logo avec un lien vers la page d'accueil */}
+        <NavLink to="/" className="logo-link">
+          <img src="/logo.png" alt="Logo" />
+        </NavLink>
       </div>
       <div className='menu'>
         {/* Crée un lien vers la page d'accueil */}
-        <Link to="/">Accueil</Link>
+        <NavLink exact="true" to="/" className={({ isActive }) => (isActive ? "active-link" : "menu-link")}>Accueil</NavLink>
         {/* Crée un lien vers la page "A propos" */}
-        <Link to="/about">A propos</Link>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "active-link" : "menu-link")}>A propos</NavLink>
       </div>
     </nav>
   );

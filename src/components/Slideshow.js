@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 // Crée un composant fonctionnel Slideshow
 const Slideshow = ({ images }) => {
@@ -19,16 +21,24 @@ const Slideshow = ({ images }) => {
     setCurrentImageIndex(newIndex);
   };
 
-  // Renvoie le rendu du diaporama avec les boutons "précédent" et "suivant" et l'image actuelle
+  // Calculer le compteur de photos
+  const photoCounter = `${currentImageIndex + 1}/${images.length}`;
+
+  // Renvoie le rendu du diaporama avec les boutons "précédent" et "suivant", l'image actuelle et le compteur
   return (
     <div className="slideshow">
       {images.length > 1 && (
         <>
-          <button className="slideshow-button slideshow-button-previous" onClick={previousSlide}>&lt;</button>
-          <button className="slideshow-button slideshow-button-next" onClick={nextSlide}>&gt;</button>
+          <button className="slideshow-button slideshow-button-previous" onClick={previousSlide}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button className="slideshow-button slideshow-button-next" onClick={nextSlide}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </>
       )}
       <img className="slideshow-image" src={images[currentImageIndex]} alt="" />
+      <div className="photo-counter">{photoCounter}</div>
     </div>
   );
 };
